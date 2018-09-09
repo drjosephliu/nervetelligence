@@ -1,50 +1,31 @@
-# Twilio Video Quickstart for JavaScript
+# Nervetelligence
+PennApps Hackathon Project: https://devpost.com/software/nervetelligence
 
-[![OS X/Linus Build Status](https://secure.travis-ci.org/twilio/video-quickstart-js.png?branch=master)](http://travis-ci.org/twilio/video-quickstart-js) [![Windows Build status](https://ci.appveyor.com/api/projects/status/3u69uy9c0lsap3dr?svg=true
-)](https://ci.appveyor.com/project/markandrus/video-quickstart-js)
+## Inspiration
+In third-world countries and in remote areas, there are few doctors available to diagnose disease. Among these diseases are strokes, which require immediate medical attention to avoid serious injury. Unfortunately, many do not receive treatment in time, simply because they cannot identify whether they are indeed having a stroke or not.
 
-This application should give you a ready-made starting point for writing your
-own video apps with Twilio Video. Before we begin, we need to collect
-all the config values we need to run the application:
+Telemedicine offers a solution to this problem. However, it is only a partial solution. Doctors can only gain information through visual and audio cues—much is left out in regards to sensory and musculoskeletal performance. Nervetelligence bridges this knowledge gap by providing physicians with key information that could traditionally only be gained by touching the patient.
 
-* Account SID: Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).
-* API Key: Used to authenticate - [generate one here](https://www.twilio.com/console/runtime/api-keys).
-* API Secret: Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/runtime/api-keys).
+## What it does
+Nervetelligence is a machine a patient insert's their arm into, along with an accompanying web application. It gathers three different data types: the existence of proprioception; light touch sensation in the palm and in the forearm; and musculoskeletal strength in the arm.
 
-## A Note on API Keys
+In order to detect the existence of proprioception, patients will extend their arm into Nerveintelligence until their finger fits snugly in single-finger compartment. Then, a rotating wheel with spokes will either push the distal and intermediate phalanges up or down. The patient will be asked to answer about the directionality of the given push (stroke victims will have difficulty recognizing their joint's position in space).
 
-When you generate an API key pair at the URLs above, your API Secret will only
-be shown once - make sure to save this in a secure location, 
-or possibly your `~/.bash_profile`.
+Light touch sensation will be solicited through two hanging servo motors, one fixed with a pencil and the other with a leaf. These two objects will be dragged across skin as they oscillate back and forth. Patients will respond to whether the object was felt or not. Missing or partial sensation can indicate a stroke.
 
-## Setting Up The Application
+Finally, musculoskeletal strength will be measured with a Myo Armband. Nerveintelligence supports the testing of two distinct hand movements which reveal overall arm strength.
 
-Create a configuration file for your application:
-```bash
-cp .env.template .env
-```
+## How I built it
+Nervetelligence was prototyped in a cardboard box. There are two breadboards, three servo 180-degree motors, two Arduino Uno's, and one force sensor attached. The force sensor detects when a finger is inserted into the proprioception cavity. The Arduino Uno's control the servo motors responsible for light touch sensation.
 
-Edit `.env` with the configuration parameters we gathered from above.
+## Challenges I ran into
+We faced challenges when trying to control the servo motors in real-time. This proved difficult since they were controlled by Arduino's, which are microcontrollers. Furthermore, we faced hiccups when implementing video messaging functionality on the web application.
 
-Next, we need to install our dependencies from npm:
-```bash
-npm install
-```
+## Accomplishments that I'm proud of
+We are proud of all of the hardware we had to put together and its software. It was most of our first times working with hardware.
 
-Now we should be all set! Run the application:
-```bash
-npm start
-```
+## What I learned
+We learned about breadboards, resistors, jump wires, soldering, Arduinos, servos, and force sensors, web development, the Myo armband, and the diagnosis of stroke.
 
-Your application should now be running at [http://localhost:3000](http://localhost:3000). Just enter
-the name of the room you want to join and click on 'Join Room'. Then,
-open another tab and join the same room. Now, you should see your own
-video in both the tabs!
-
-![screenshot of chat app](https://s3.amazonaws.com/com.twilio.prod.twilio-docs/images/video2.original.png)
-
-## Examples
-
-The project contains some use-case examples for the Twilio Video JS SDK. After running the application
-by following the instructions above, go to [http://localhost:3000/examples](http://localhost:3000/examples)
-to try them out.
+## What's next for Nervetelligence
+We want to expand the capabilities of Nervetelligence to gather information about other diseases, such as diabetes and rheumatoid arthritis.

@@ -7,7 +7,36 @@ p {
 }
 
 body {
-  background: #272726;
+  background: #F4F8F9;
+}
+
+.navbar {
+  background-color: #00e6c3;
+}
+
+.navbar-brand {
+  font-size: 36px;
+}
+
+.btn {
+  background-color: #00e6c3;
+  color: white;
+  width: 15em;
+  height: 2.5em;
+  margin-top: 1.75em;
+  border-radius: 1em;
+  font-family: "Helvetica Light", Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  outline: 0;
+}
+
+.btn:hover {
+  background-color: #00B7C8;
+}
+
+.btn:active {
+  background-color: #00B7C8;
 }
 
 div#remote-media {
@@ -16,6 +45,20 @@ div#remote-media {
   background-color: #fff;
   text-align: center;
   margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#exam-form{
+  display: none;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  color: #777776;
+}
+
+.radio-group input{
+  margin: 20px;
 }
 
 div#remote-media video {
@@ -47,8 +90,8 @@ div#controls div#preview {
 div#controls p.instructions {
   text-align: left;
   margin-bottom: 1em;
-  font-family: Helvetica-LightOblique, Helvetica, sans-serif;
-  font-style: oblique;
+  /* font-family: Helvetica-LightOblique, Helvetica, sans-serif; */
+  /* font-style: oblique; */
   font-size: 1.25em;
   color: #777776;
 }
@@ -59,7 +102,7 @@ div#controls button {
   margin-top: 1.75em;
   border-radius: 1em;
   font-family: "Helvetica Light", Helvetica, sans-serif;
-  font-size: .8em;
+  font-size: 1em;
   font-weight: lighter;
   outline: 0;
 }
@@ -112,12 +155,12 @@ div#controls div#room-controls input {
   padding: .5em;
   display: block;
 }
-
+/*
 div#controls div#room-controls button {
-  color: #fff;
+  color: #686865;
   background: 0 0;
   border: 1px solid #686865;
-}
+} */
 
 div#controls div#room-controls button#button-leave {
   display: none;
@@ -131,6 +174,7 @@ div#controls div#log {
   padding: 1.5em;
   float: right;
   overflow-y: scroll;
+  border-radius: 10px;
 }
 
 div#controls div#log p {

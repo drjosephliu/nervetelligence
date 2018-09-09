@@ -18,6 +18,8 @@ var randomName = require('./randomname');
 
 // Create Express webapp.
 var app = express();
+app.set('view engine', 'pug');
+app.use(express.static(path.join(__dirname, '../views')));
 
 // Set up the paths for the examples.
 [
@@ -73,6 +75,23 @@ app.get('/token', function(request, response) {
   response.send({
     identity: identity,
     token: token.toJwt()
+  });
+});
+
+app.get('/results', (req, res) => {
+  console.log(req.query);
+  const {
+    propioception,
+    lightTouch1,
+    lightTouch2,
+    pain1,
+    pain2
+  } = req.query;
+
+  res.render('index', {
+    propioception: propioception,
+    lightTouch1: lightTouch1, lightTouch2: lightTouch2,
+    pain1: pain1, pain2: pain2
   });
 });
 

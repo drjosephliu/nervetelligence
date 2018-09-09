@@ -1,0 +1,20 @@
+body {
+  /* background: #F4F8F9; */
+  color: #777776;
+}
+
+.navbar {
+  background-color: #00e6c3;
+}
+
+.navbar-brand {
+  font-size: 36px;
+}
+
+.report-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}

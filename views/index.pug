@@ -1,0 +1,53 @@
+html
+  head
+    title Nervetelligence Results!
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous")
+    link(rel='stylesheet', href='resultsStyles.css', type='text/css')
+
+  body
+    nav(class='navbar navbar-light')
+      span(class='navbar-brand mb-0 text-white h1') Nervetelligence
+    div(class='report-container')
+      h1 Your Nervetelligence Report
+      - var distal
+      - var proximal
+      if propioception == 'yes'
+        p Propioception is <b>normal</b>.
+      else
+        - distal = true
+        p There is <b>loss</b> of propioception.
+
+      if lightTouch1 == 'yes' && lightTouch2 == 'yes'
+        p Sensation to light touch is <b>normal</b>
+      else if lightTouch1 == 'no' && lightTouch2 == 'yes'
+        - distal = true
+        p There is <b>loss</b> of light touch sensation distally
+      else if lightTouch1 == 'yes' && lightTouch2 == 'no'
+        - proximal = true
+        p There is <b>loss</b> of light touch sensation proximally
+      else
+        - distal = true
+        - proximal = true
+        p There is <b>loss</b> of light touch sensation in entire arm
+
+      if pain1 == 'yes' && pain2 == 'yes'
+        p Sensation to pain is <b>normal</b>.
+      else if pain1 == 'no' && pain2 == 'yes'
+        - distal = true
+        p There is <b>loss</b> of light touch sensation distally
+      else if pain1 == 'yes' && pain2 == 'no'
+        - proximal = true
+        p There is <b>loss</b> of light touch sensation proximally
+      else
+        - distal = true
+        - proximal = true
+        p There is <b>loss</b> of light touch sensation in entire arm.
+
+      if distal == true && proximal != true
+        img(src='arm_distal.jpg')
+      else if distal != true && proximal == true
+        img(src='arm_proximal.jpg')
+      else if distal == true && proximal == true
+        img(src='arm_both.jpg')
+      else
+        img(src='arm_normal.jpg')

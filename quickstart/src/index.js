@@ -46,6 +46,7 @@ $.getJSON('/token', function(data) {
 
   // Bind button to join Room.
   document.getElementById('button-join').onclick = function() {
+
     roomName = document.getElementById('room-name').value;
     if (!roomName) {
       alert('Please enter a room name.');
@@ -84,6 +85,8 @@ function roomJoined(room) {
   document.getElementById('button-join').style.display = 'none';
   document.getElementById('button-leave').style.display = 'inline';
 
+  document.getElementById('exam-form').style.display = 'flex';
+
   // Attach LocalParticipant's Tracks, if not already attached.
   var previewContainer = document.getElementById('local-media');
   if (!previewContainer.querySelector('video')) {
@@ -106,6 +109,7 @@ function roomJoined(room) {
   room.on('trackAdded', function(track, participant) {
     log(participant.identity + " added track: " + track.kind);
     var previewContainer = document.getElementById('remote-media');
+
     attachTracks([track], previewContainer);
   });
 
@@ -163,6 +167,11 @@ function log(message) {
   logDiv.innerHTML += '<p>&gt;&nbsp;' + message + '</p>';
   logDiv.scrollTop = logDiv.scrollHeight;
 }
+
+// Submit form
+$('#exam-form').submit(function(e) {
+  console.log('submit');
+});
 
 // Leave Room.
 function leaveRoomIfJoined() {

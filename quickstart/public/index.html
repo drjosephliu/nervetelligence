@@ -1,22 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Twilio Video - Video Quickstart</title>
+  <title>Nervetelligence</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div id="remote-media"></div>
+  <nav class='navbar navbar-light'>
+    <span class='navbar-brand mb-0 text-white h1'>Nervetelligence</span>
+  </nav>
+<div id="remote-media">
+  <div id='exam-form'>
+    <h2>Examination Scores</h2>
+    <form action="/results">
+      <div class='radio-group'>
+        Propioception:
+        <input type='radio' name='propioception' value='yes'>Yes
+        <input type='radio' name='propioception' value='no'>No
+      </div>
+
+      <div class='radio-group'>
+        Light touch 1:
+        <input type='radio' name='lightTouch1' value='yes'>Yes
+        <input type='radio' name='lightTouch1' value='no'>No
+      </div>
+
+      <div class='radio-group'>
+        Light touch 2:
+        <input type='radio' name='lightTouch2' value='yes'>Yes
+        <input type='radio' name='lightTouch2' value='no'>No
+      </div>
+
+      <div class='radio-group'>
+        Pain 1:
+        <input type='radio' name='pain1' value='yes'>Yes
+        <input type='radio' name='pain1' value='no'>No
+      </div>
+
+      <div class='radio-group'>
+        Pain 2:
+        <input type='radio' name='pain2' value='yes'>Yes
+        <input type='radio' name='pain2' value='no'>No
+      </div>
+      <button class='btn' type="submit">Submit</button>
+    </form>
+  </div>
+</div>
 <div id="controls">
   <div id="preview">
-    <p class="instructions">Hello Beautiful</p>
+    <p class="instructions">Welcome!</p>
     <div id="local-media"></div>
     <button id="button-preview">Preview My Camera</button>
   </div>
   <div id="room-controls">
     <p class="instructions">Room Name:</p>
-    <input id="room-name" type="text" placeholder="Enter a room name" />
-    <button id="button-join">Join Room</button>
-    <button id="button-leave">Leave Room</button>
+    <input id="room-name" class='form-control' type="text" placeholder="Enter a room name" />
+    <button id="button-join" class='btn'>Join Room</button>
+    <button id="button-leave" class='btn'>Leave Room</button>
   </div>
   <div id="log"></div>
 </div>

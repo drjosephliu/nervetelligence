@@ -2,9 +2,6 @@
 PennApps Hackathon Project: https://devpost.com/software/nervetelligence
 
 ## To run:
-Create a `.env` file with Twilio credentials
-
-Then run the following:
 ```
 npm install && npm start
 ```

@@ -1,6 +1,14 @@
 # Nervetelligence
 PennApps Hackathon Project: https://devpost.com/software/nervetelligence
 
+## To run:
+Create a `.env` file with Twilio credentials
+
+Then run the following:
+```
+npm install && npm start
+```
+
 ## Inspiration
 In third-world countries and in remote areas, there are few doctors available to diagnose disease. Among these diseases are strokes, which require immediate medical attention to avoid serious injury. Unfortunately, many do not receive treatment in time, simply because they cannot identify whether they are indeed having a stroke or not.
 

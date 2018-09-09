@@ -17,31 +17,17 @@ html
         - distal = true
         p There is <b>loss</b> of propioception.
 
-      if lightTouch1 == 'yes' && lightTouch2 == 'yes'
-        p Sensation to light touch is <b>normal</b>
-      else if lightTouch1 == 'no' && lightTouch2 == 'yes'
-        - distal = true
-        p There is <b>loss</b> of light touch sensation distally
-      else if lightTouch1 == 'yes' && lightTouch2 == 'no'
-        - proximal = true
-        p There is <b>loss</b> of light touch sensation proximally
+      if lightTouch1 == 'yes'
+        p Sensation to light touch is <b>normal</b>.
       else
         - distal = true
-        - proximal = true
-        p There is <b>loss</b> of light touch sensation in entire arm
+        p There is <b>loss</b> of light touch sensation.
 
-      if pain1 == 'yes' && pain2 == 'yes'
+      if pain1 == 'yes'
         p Sensation to pain is <b>normal</b>.
-      else if pain1 == 'no' && pain2 == 'yes'
-        - distal = true
-        p There is <b>loss</b> of light touch sensation distally
-      else if pain1 == 'yes' && pain2 == 'no'
-        - proximal = true
-        p There is <b>loss</b> of light touch sensation proximally
       else
-        - distal = true
         - proximal = true
-        p There is <b>loss</b> of light touch sensation in entire arm.
+        p There is <b>loss</b> of pain sensation.
 
       if distal == true && proximal != true
         img(src='arm_distal.jpg')

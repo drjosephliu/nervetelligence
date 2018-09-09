@@ -83,15 +83,17 @@ app.get('/results', (req, res) => {
   const {
     propioception,
     lightTouch1,
-    lightTouch2,
-    pain1,
+    // lightTouch2,
+    // pain1,
     pain2
   } = req.query;
 
   res.render('index', {
     propioception: propioception,
-    lightTouch1: lightTouch1, lightTouch2: lightTouch2,
-    pain1: pain1, pain2: pain2
+    lightTouch1: lightTouch1,
+    // lightTouch2: lightTouch2,
+    // pain1: pain1,
+    pain2: pain2
   });
 });
 

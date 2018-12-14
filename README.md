@@ -20,16 +20,16 @@ Light touch sensation will be solicited through two hanging servo motors, one fi
 
 Finally, musculoskeletal strength will be measured with a Myo Armband. Nerveintelligence supports the testing of two distinct hand movements which reveal overall arm strength.
 
-## How I built it
+## How we built it
 Nervetelligence was prototyped in a cardboard box. There are two breadboards, three servo 180-degree motors, two Arduino Uno's, and one force sensor attached. The force sensor detects when a finger is inserted into the proprioception cavity. The Arduino Uno's control the servo motors responsible for light touch sensation.
 
-## Challenges I ran into
+## Challenges we ran into
 We faced challenges when trying to control the servo motors in real-time. This proved difficult since they were controlled by Arduino's, which are microcontrollers. Furthermore, we faced hiccups when implementing video messaging functionality on the web application.
 
-## Accomplishments that I'm proud of
+## Accomplishments that we're proud of
 We are proud of all of the hardware we had to put together and its software. It was most of our first times working with hardware.
 
-## What I learned
+## What Iwelearned
 We learned about breadboards, resistors, jump wires, soldering, Arduinos, servos, and force sensors, web development, the Myo armband, and the diagnosis of stroke.
 
 ## What's next for Nervetelligence

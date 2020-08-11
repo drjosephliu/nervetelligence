@@ -1,6 +1,8 @@
 # Nervetelligence
 PennApps Hackathon Project: https://devpost.com/software/nervetelligence
 
+[Demo](https://nervetelligence-pennapps.herokuapp.com/quickstart/)
+
 ## To run:
 ```
 npm install && npm start

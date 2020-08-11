@@ -1,7 +1,6 @@
-# Nervetelligence
-PennApps Hackathon Project: https://devpost.com/software/nervetelligence
+# Nervetelligence ([Demo])(https://nervetelligence-pennapps.herokuapp.com/quickstart/)
 
-## [Demo](https://nervetelligence-pennapps.herokuapp.com/quickstart/)
+PennApps Hackathon Project: https://devpost.com/software/nervetelligence
 
 ## To run:
 ```

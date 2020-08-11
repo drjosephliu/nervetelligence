@@ -1,4 +1,4 @@
-# Nervetelligence ([Demo])(https://nervetelligence-pennapps.herokuapp.com/quickstart/)
+# Nervetelligence ([Demo](https://nervetelligence-pennapps.herokuapp.com/quickstart/))
 
 PennApps Hackathon Project: https://devpost.com/software/nervetelligence
 
